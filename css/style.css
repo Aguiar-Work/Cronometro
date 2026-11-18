@@ -1,0 +1,397 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Helvetica, sans-serif;
+}
+
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+    padding: 30px 20px;
+
+    background-image: url('../img/1920x1080-architecture-buildings-city_1574938336.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 550px;
+    padding: 40px 30px;
+
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+}
+
+
+
+.container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #323232;
+    margin-bottom: 35px;
+}
+
+
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 35px;
+    flex-wrap: nowrap;
+}
+
+
+
+.time {
+    font-family: 'Roboto Mono', monospace;
+    font-size: clamp(2rem, 7vw, 3.2rem);
+    font-weight: 700;
+
+    color: #1F8391;
+    background: #f1f1f1;
+
+    padding: 15px 12px;
+    border-radius: 10px;
+    min-width: 85px;
+
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+
+.separator {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #323232;
+    flex-shrink: 0;
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 0;
+}
+
+.btn {
+    min-width: 105px;
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #1F8391;
+    color: white;
+
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #28a1b1;
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 12px rgba(0, 222, 230, 0.3);
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+
+
+.card {
+    position: relative;
+
+    width: 100%;
+    max-width: 350px;
+
+    padding: 30px 20px;
+
+    background: #1F8391;
+
+    border-radius: 15px;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+    color: white;
+
+    margin: 0 auto;
+}
+
+
+
+.card .card-border-top {
+    width: 60%;
+    height: 8px;
+    box-shadow: 2px 2px 1px black;
+    background: #ffffff;
+
+    margin: -30px auto 25px;
+
+    border-radius: 0 0 15px 15px;
+}
+
+
+
+.card h3 {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px black;
+}
+
+
+
+.card .img {
+    width: 110px;
+    height: 110px;
+
+    background-image: url('https://i.postimg.cc/TY7xHw7h/Retrato-profissional-em-estudio.png');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 50%;
+
+    margin: 10px auto 20px;
+
+    border: 3px solid white;
+}
+
+
+
+.card p {
+    color: white;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px black;
+}
+
+
+
+.card .job {
+    font-weight: 400;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    display: block;
+    text-align: center;
+
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+
+
+.social-links,
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.social-btn {
+    cursor: pointer;
+
+    height: 45px;
+    width: 45px;
+
+    color: #333;
+
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 3px black;
+
+    background: #165a63;
+
+    transition: width 0.3s ease, background 0.3s ease;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.social-btn svg {
+    height: 20px;
+    width: 20px;
+    min-width: 20px;
+}
+
+.social-btn span {
+    width: 0;
+    overflow: hidden;
+
+    transition: 0.3s ease;
+
+    text-align: center;
+    margin-left: 0;
+
+    white-space: nowrap;
+    color: white;
+}
+
+.social-btn:hover {
+    width: 160px;
+    border-radius: 8px;
+    background: #10464d;
+}
+
+.social-btn:hover span {
+    width: 105px;
+    margin-left: 5px;
+    color: white;
+}
+
+#twitter svg {
+    fill: #1da1f2;
+}
+
+#linkedin svg {
+    fill: #1da1f2;
+}
+
+#github svg {
+    fill: #ffffff;
+}
+
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+        gap: 20px;
+        background-attachment: scroll;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .container h1 {
+        font-size: 1.6rem;
+        
+    }
+
+    .timer {
+        gap: 4px;
+    }
+
+    .time {
+        min-width: 0;
+        width: 27%;
+        padding: 12px 5px;
+        font-size: clamp(1.5rem, 8vw, 2.2rem);
+    }
+
+    .separator {
+        font-size: 1.7rem;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        flex: 1 1 40%;
+        min-width: 0;
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+        padding: 25px 15px;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    .social-links {
+        gap: 5px;
+    }
+
+    .social-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .social-btn:hover {
+        width: 130px;
+    }
+}
+
+
+
+@media (max-width: 350px) {
+
+    .timer {
+        gap: 2px;
+    }
+
+    .time {
+        padding: 10px 3px;
+        font-size: 1.4rem;
+    }
+
+    .separator {
+        font-size: 1.4rem;
+    }
+
+    .card h3 {
+        font-size: 0.9rem;
+    }
+
+}
